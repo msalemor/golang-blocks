@@ -6,7 +6,17 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const art string = `<INSERT ASCII ART HERE>`
+// ASCII ART @ https://www.asciiart.eu/text-to-ascii-art
+const art string = `
+                               ████   ███ 
+                              ░░███  ░░░  
+  ██████  █████ █████  ██████  ░███  ████ 
+ ███░░███░░███ ░░███  ███░░███ ░███ ░░███ 
+░███ ░░░  ░███  ░███ ░███ ░░░  ░███  ░███ 
+░███  ███ ░░███ ███  ░███  ███ ░███  ░███ 
+░░██████   ░░█████   ░░██████  █████ █████
+ ░░░░░░     ░░░░░     ░░░░░░  ░░░░░ ░░░░░ 
+`
 
 var version string = "0.0.1"
 
