@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"fmt"
-	"generator/pkg"
 	"log"
 	"os"
 	"path/filepath"
