@@ -77,7 +77,11 @@ func Read(category,key,value string) CKVEntry {
 }
 
 func Upsert(category, key, value string) {
-  sqlStmt := fmt.Sprintf(`INSERT OR REPLACE INTO %s (category, key, value) VALUES (?, ?, ?)`, TableName)
+	if category == "" || key == "" || value == "" {
+		log.Fatal("the category, key and value are required")
+		return
+	}
+	sqlStmt := fmt.Sprintf(`INSERT OR REPLACE INTO %s (category, key, value) VALUES (?, ?, ?)`, TableName)
 	_, err := db.Exec(sqlStmt, category,key,value)
 	if err != nil {
 		log.Printf("%q: %s\n", err, sqlStmt)
@@ -86,7 +90,10 @@ func Upsert(category, key, value string) {
 }
 
 func Delete(category, key string) {
-  sqlStmt := fmt.Sprintf(`DELETE FROM %s WHERE collection = ? AND key = ?;`, TableName)
+	if category == "" || key == "" {
+		log.Fatal("the category and key are required")
+	}
+	sqlStmt := fmt.Sprintf(`DELETE FROM %s WHERE collection = ? AND key = ?;`, TableName)
 	_, err := db.Exec(sqlStmt, collection, key)
 	if err != nil {
 		log.Printf("%q: %s\n", err, sqlStmt)
