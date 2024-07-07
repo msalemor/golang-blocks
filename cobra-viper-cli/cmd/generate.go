@@ -36,7 +36,7 @@ var generateCmd = &cobra.Command{
 		if filePath != "" {
 			// Convert markdown file to json
 			//pkg.ConvertMdToJSON(filePath)
-      fmt.Println(filePath)
+			fmt.Println(filePath)      
 		}
 		// Convert all markdown files in a folder to json
 		if folderPath != "" {
@@ -57,7 +57,7 @@ var generateCmd = &cobra.Command{
 				wg.Add(1)
 				go func(path string) {
 					//pkg.ConvertMdToJSON(path)
-          fmt.Println(path)
+					fmt.Println(path)          
 					wg.Done()
 
 				}(filePath)
