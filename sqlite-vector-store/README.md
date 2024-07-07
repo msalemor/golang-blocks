@@ -1,9 +1,9 @@
 # sqlite-vector-store
 
-## Overview 
+## Description 
 
-This is somewhat a similar Semantic Kernel implatation of the SQLite Connector in Go.
+This is a similar Semantic Kernel implatation of the SQLite Connector to make SQLite become a cosine similarity vector database.
 
 ## References
 
-- [Semantic Kernel - SQLite Connector]()
+- [Semantic Kernel - SQLite Connector](https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/Connectors/Connectors.Memory.Sqlite)
