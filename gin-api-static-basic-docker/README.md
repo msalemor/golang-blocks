@@ -2,4 +2,4 @@
 
 ## Description
 
-- An API and static file server using Gin and hosted via a scratch docker container.
+An API and static file server using Gin and hosted via a scratch docker container.
