@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cobra-viper-cli/cmd"
+	"cvcli/cmd"
 )
 
 func main() {
