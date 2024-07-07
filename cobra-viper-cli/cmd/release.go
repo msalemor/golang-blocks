@@ -19,7 +19,7 @@ var releasesCmd = &cobra.Command{
 	Short: "Prints the release information",
 	Long:  `Prints the release information`,
 	Run: func(cmd *cobra.Command, args []string) {
-    // print release information
+		// print release information
 		printVersion()
 		fmt.Println(releases)
 	},
